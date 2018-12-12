@@ -60,7 +60,15 @@ the 27 values is multipled with the first top left part of the input matrix and 
 Incase we decide to multiply the input matrix with several filters , each output would be different and then we would have final output of oxoxnc
 where nc is the number of filters we convoluted with.
 
-Convolutional Neural Network Layer
+# Convolutional Neural Network Layer
 
 Each layer that we have consists of the same architecture  - we have the input layer convoluting with a certain number of filters n , which provides an output o. Each layer that we have will add a bias to the output and that is inserted as a parameter into a non linearity activation function. Filters can also be brought forward as features for your image. The final activated output is then provided as an input for the next layer.
+
+# Example
+
+IN this example we can understand a bit more of how an actual convolutional neural network works
+Imagine i have an input matrix of 45x45x3 where Height of the matrix is 45 and the width if 45 and the number of channels is 3
+And i want to convolve it with a filter of size 3x3x3 , and i have about 10 filters - i will not do any padding i will have a stride of 1 and therefore my output matrix can be calculated with the formula ( n + 2p - s)/f + 1  where f is the stride value p is the padding value and n is the matrix input value. The output matrix will be 42x42x10 , where 10 is the number of filters
+
+Now i want to convolve it again using another 20 filters and the same parameters , my output would be a 39x39x20. Notice how having more filters increases the size of the output in the z axis. I finally flatten my final output layer and provide it as an input into an softmax or activation function to learn to predict the output with a new input.
 
