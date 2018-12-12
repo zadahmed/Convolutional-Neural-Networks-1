@@ -45,6 +45,8 @@ Another method of convolution is called strided convolution
 Strided Convolution is basically convolution but instead of moving from the first matrix element we skip by a certain number of strides
 Using Strided convolution without padding leads to loss of alot of information hence padding is highly suggsted.
 
+Strided convolution output = ( n + 2p - s)/f + 1 where f is the number of stride.
+
 # 3D Convolution
 
 3D convolution is more of what everyday images require , since all images we process consist of Red , Green and Blue Channel (RBG) therefore
@@ -57,3 +59,8 @@ the 27 values is multipled with the first top left part of the input matrix and 
 
 Incase we decide to multiply the input matrix with several filters , each output would be different and then we would have final output of oxoxnc
 where nc is the number of filters we convoluted with.
+
+Convolutional Neural Network Layer
+
+Each layer that we have consists of the same architecture  - we have the input layer convoluting with a certain number of filters n , which provides an output o. Each layer that we have will add a bias to the output and that is inserted as a parameter into a non linearity activation function. Filters can also be brought forward as features for your image. The final activated output is then provided as an input for the next layer.
+
