@@ -1,4 +1,4 @@
-# Convulutional-Neural-Networks-1
+# Convolutional-Neural-Networks-1
 
 # Edge Detection 
 
